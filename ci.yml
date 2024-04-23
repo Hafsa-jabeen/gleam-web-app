@@ -1,20 +1,12 @@
+
 prepare:
-  # Put your commands here.
   steps:
-  - name: "Install Gleam and Dependencies"
-    command: "nix-env -iA nixpkgs.gleam"
-    command: "nix-env -iA nixpkgs.erlang"
-    command: "nix-env -iA nixpkgs.rebar3"
-    command: gleam add mist gleam_http gleam_erlang
-
+    - command: "nix-env -iA nixpkgs.gleam"
+    - command: "nix-env -iA nixpkgs.erlang"
+    - command: "nix-env -iA nixpkgs.rebar3"
+    - command: gleam add mist gleam_http gleam_erlang
 test:
-  # Put your commands here.
-  steps:
-  - name: "Test Gleam"
-    command: "gleam test"
-
+  steps: []
 run:
-  # Put your commands here.
   steps:
-  - name: "Run the Gleam project"
-    command: "gleam run"
+    - command: gleam run
